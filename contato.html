@@ -50,6 +50,12 @@
 						<li class="nav-item ">
 							<a class="nav-link" href="contato.html">Contato</a>
 						</li>
+						<li class="nav-item ">
+							<a class="nav-link" href="equipe.html">Equipe</a>
+						</li>
+						<li class="nav-item ">
+							<a class="nav-link" href="contato.html">Novidades</a>
+						</li>
 					</ul>
 					<form class="form-inline my-2 my-lg-0">
 						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -73,21 +79,24 @@
 				<div class="row">
 
 					<div class="col-md-6 contato">
+						<p id="erro"></p>
 
-						<form>
+						<form method="POST" id="formulario">
 							<div class="form-group">
-								<label for="nome">
-									<ion-icon class="icon-contato" name="person"></ion-icon> Seu nome
+								<label for="username">
+									<ion-icon class="icon-contato" name="person"></ion-icon> Username
 								</label>
-								<input type="text" class="form-control" id="nome" placeholder="Exemplo: Alyson Miguel">
+								<input type="text" class="form-control" name="username" id="username"
+									placeholder="Exemplo: Alyson Miguel">
+								<p id="erroNome"></p>
 							</div>
 
 							<div class="form-group">
-								<label for="e-mail">
-									<ion-icon name="mail"></ion-icon> Seu E-mail
+								<label for="email">
+									<ion-icon name="mail"></ion-icon>Email
 								</label>
-								<input type="email" class="form-control" id="e-mail" aria-describedby="emailHelp"
-									placeholder="Exemplo: alysonmiguel16@gmail.com">
+								<input type="email" class="form-control" name="email" id="email"
+									aria-describedby="emailHelp" placeholder="Exemplo: alysonmiguel16@gmail.com">
 							</div>
 
 							<div class="form-group">
@@ -104,15 +113,14 @@
 								<textarea class="form-control" id="textarea" rows="3"></textarea>
 							</div>
 
-							<button type="submit" class="btn btn-contato btn-block">Eviar</button>
+							<button type="submit" onclick="verificar()" class="btn btn-contato btn-block">Eviar</button>
 						</form>
-
 					</div>
 
 					<div class="col-md-6 contato">
 						<div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
 							<iframe
-								src="https://maps.google.com/maps?q=Residência+Universitaria+UFRN/&t=&z=13&ie=UTF8&iwloc=&output=embed"
+								src="https://maps.google.com/maps?q=Escola+agricola+de+jundiai/&t=&z=13&ie=UTF8&iwloc=&output=embed"
 								frameborder="0" style="border:0" allowfullscreen></iframe>
 						</div>
 					</div>

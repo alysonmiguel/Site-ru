@@ -1,64 +1,53 @@
-$(document).ready(function() {
-  $("img").addClass("animated fadeInDown");
-});
+let username = document.getElementById("username").value;
+let email = document.getElementById("email").value;
+let assunto = document.getElementById("assunto").value;
+let textarea = document.getElementById("textarea").value;
 
-function dados() {
-  $(document).ready(function() {
-    $("#dados").addClass("animated bounceInDown");
-  });
+let erro = [];
+
+function verificar() {
+    let ready = true;
+    username = document.getElementById("username").value;
+    email = document.getElementById("email").value;
+    assunto = document.getElementById("assunto").value;
+    textarea = document.getElementById("textarea").value;
+
+    if (!username || !email || !assunto || !textarea){
+        ready = false;
+        erro.push("Os campos são obrigatórios");
+    }
+
+    if (username.length < 4) {
+        ready = false;
+        document.getElementById("erroNome").innerText= "Usuario deve ter pelo menos de 4 letras"
+    }
+    if (!email.includes("@")) {
+        ready = false
+        erro.push("Esse não é um email valido");
+    }
+    if (assunto.length < 5) {
+        ready = false
+        erro.push("O assunto deve possuir mais de 5 caracteres");
+    }
+    if (textarea.length <= 20) {
+        erro.push("A mensagem deve possuir no mínimo 20 caracteres");
+        ready = false
+    };
+
+    sendForm(ready)
 }
 
-jQuery(document).ready(function($) {
-  $(".scroll").click(function(event) {
-    event.preventDefault();
-    $("html,body").animate({ scrollTop: $(this.hash).offset().top }, 700);
-  });
-});
 
-$(".progress-bar").each(function() {
-  var $bar = $(this);
-  var progress = setInterval(function() {
-    var currWidth = parseInt($bar.attr("aria-valuenow"));
-    var maxWidth = parseInt($bar.attr("aria-valuemax"));
-
-    //update the progress
-    $bar.width(currWidth + "%");
-    $bar.attr("aria-valuenow", currWidth + 1);
-
-    //clear timer when max is reach
-    if (currWidth >= maxWidth) {
-      clearInterval(progress);
+function sendForm(ready) {
+    document.getElementById("formulario").addEventListener("click", function (event) {
+      event.preventDefault()    
+    });
+    if (ready) {
+      alert("Envio bem sucedido!")
+      } else {
+            console.log(erro);
+            alert("algo ta errado folks")
+            erro = [];
+      }
+      
     }
-  }, 100);
-});
-
-$(document).ready(function() {
-  $(".box").hide();
-
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 0) {
-      $(".box").fadeIn();
-    } else {
-      $(".box").fadeOut();
-    }
-  });
-});
-
-/*
-var $target = $(".anime");
-var animar = ".anime-start";
-function animeScroll() {
-  var documentTop = $(document).scrollTop();
-
-  $target.each(function() {
-    var itemTop = $(this).offset().top;
-    if (documentTop > itemTop - 300) {
-      $(this).addClass(animar);
-    } else {
-      $(this).removeClass(animar);
-    }
-  });
-}
-
-animeScroll();
-*/
