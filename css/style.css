@@ -2,9 +2,13 @@
   background-color: rgb(254, 96, 2);
 }
 
-h3 {
-  background-color: rgb(254, 96, 2);
-  opacity: 0.6;
+h2 {
+  color: rgb(254, 96, 2);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+h1 {
+  color: rgb(254, 96, 2);
 }
 
 body {
@@ -21,7 +25,7 @@ body {
 }
 
 .btn-contato {
-  background-color: rgb(75, 73, 146);
+  background-color: rgb(220, 53, 69);
   color: white;
 }
 
