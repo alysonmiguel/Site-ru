@@ -41,7 +41,7 @@ function verificar() {
   sendForm(ready);
 }
 
-function verificarSatisfacao() {
+function satisfacao() {
   let ready = true;
   username = document.getElementById("username").value;
   textarea = document.getElementById("textarea").value;
@@ -66,8 +66,7 @@ function verificarSatisfacao() {
 }
 
 function sendForm(ready) {
-  document
-    .getElementById("formulario")
+  document.getElementById("formulario")
     .addEventListener("click", function(event) {
       event.preventDefault();
     });
@@ -75,7 +74,8 @@ function sendForm(ready) {
     alert("Envio bem sucedido!");
   } else {
     console.log(erro);
-    alert("algo ta errado folks");
+    alert("Algo ta errado");
     erro = [];
   }
+
 }
