@@ -16,7 +16,7 @@
 
 	<!--CSS-->
 	<link rel="stylesheet" href="css/style.css" />
-	<title>Conta</title>
+	<title>Satisfação</title>
 </head>
 
 
@@ -28,7 +28,7 @@
 			<div class="container">
 
 				<a class="navbar-brand" href="index.html">
-					Restaurante Universitario
+					Restaurante Universitário
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
 					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -55,7 +55,7 @@
 							<a class="nav-link text-white" href="equipe.html">Equipe</a>
 						</li>
 						<li class="nav-item ">
-							<a class="nav-link text-white" href="novidade.html">Novidades</a>
+							<a class="nav-link text-white" href="satisfacao.html">Avaliação do cardápio</a>
 						</li>
 					</ul>
 				</div>
@@ -64,8 +64,60 @@
 	</header>
 
 	<main>
+		<div class="container my-5">
+			<div class="row">
+				<div class="col col-lg-4">
+					<figcaption class="figure">
+						<a href="#"><img src="img/bom.PNG" class="figure-img img-fluid rounded"
+								alt="A generic square placeholder image with rounded corners in a figure."> </a>
+						<!-- <figcaption class="figure-caption">Gostei</figcaption> -->
+					</figcaption>
+				</div>
+				<div class="col col-lg-4">
+					<figcaption class="figure">
+						<a href="#">
+							<img src="img/medio.PNG" class="figure-img img-fluid rounded"
+								alt="A generic square placeholder image with rounded corners in a figure.">
+						</a>
+						<!-- <figcaption class="figure-caption">Indiferente</figcaption> -->
+					</figcaption>
+				</div>
+				<div class="col col-lg-4">
+					<figcaption class="figure">
+						<a href="#"><img src="img/ruim.PNG" class="figure-img img-fluid rounded"
+								alt="A generic square placeholder image with rounded corners in a figure."> </a>
+						<!-- <figcaption class="figure-caption">Não gostei.</figcaption> -->
+					</figcaption>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 contato">
+					<p id="erro"></p>
 
+					<form method="POST" id="formulario">
+						<div class="form-group">
+							<label for="username">
+								<ion-icon class="icon-contato" name="person"></ion-icon> Username
+							</label>
+							<input type="text" class="form-control" name="username" id="username"
+								placeholder="Exemplo: Alyson Miguel">
+							<p id="erroNome"></p>
+						</div>
 
+						<div class="form-group">
+							<label for="textarea">
+								<ion-icon name="document"></ion-icon> Deixe sua mensagem
+							</label>
+							<textarea class="form-control" id="textarea" rows="3"></textarea>
+							<p id="erroMsg"></p>
+						</div>
+
+						<button type="submit" onclick="verificarSatisfacao()"
+							class="btn btn-contato btn-block">Eviar</button>
+					</form>
+				</div>
+			</div>
+		</div>
 
 	</main>
 

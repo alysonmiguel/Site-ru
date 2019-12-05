@@ -16,7 +16,7 @@
 
 	<!--CSS-->
 	<link rel="stylesheet" href="css/style.css" />
-	<title>Conta</title>
+	<title>Contato</title>
 </head>
 
 
@@ -28,7 +28,7 @@
 			<div class="container">
 
 				<a class="navbar-brand" href="index.html">
-					Restaurante Universitario
+					Restaurante Universitário
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
 					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -55,7 +55,7 @@
 							<a class="nav-link text-white" href="equipe.html">Equipe</a>
 						</li>
 						<li class="nav-item ">
-							<a class="nav-link text-white" href="novidade.html">Novidades</a>
+							<a class="nav-link text-white" href="satisfacao.html">Avaliação do cardápio</a>
 						</li>
 					</ul>
 				</div>
@@ -81,7 +81,7 @@
 					<div class="col-md-6 contato">
 						<p id="erro"></p>
 
-						<form method="POST" id="formulario">
+						<form method="POST" onsubmit="verificar()" id="formulario">
 							<div class="form-group">
 								<label for="username">
 									<ion-icon class="icon-contato" name="person"></ion-icon> Username
@@ -96,7 +96,7 @@
 									<ion-icon name="mail"></ion-icon>Email
 								</label>
 								<input type="email" class="form-control" name="email" id="email"
-									aria-describedby="emailHelp" placeholder="Exemplo: alysonmiguel16@gmail.com">
+									aria-describedby="emailHelp" placeholder="Exemplo: alysonmiguel@gmail.com">
 								<p id="erroEmail"></p>
 							</div>
 
@@ -116,7 +116,7 @@
 								<p id="erroMsg"></p>
 							</div>
 
-							<button type="submit" onclick="verificar()" class="btn btn-contato btn-block">Eviar</button>
+							<button type="submit" class="btn btn-contato btn-block">Eviar</button>
 						</form>
 					</div>
 					<div class="col-md-6 contato">
