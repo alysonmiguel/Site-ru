@@ -75,60 +75,60 @@
 				</div>
 				<h2 class="font-weight-bold text-center">Contatos</h2>
 
+				<section>
+					<div class="row">
 
-				<div class="row">
+						<div class="col-md-6 contato">
+							<p id="erro"></p>
 
-					<div class="col-md-6 contato">
-						<p id="erro"></p>
+							<form method="POST" onsubmit="verificar()" id="formulario">
+								<div class="form-group">
+									<label for="username">
+										<ion-icon class="icon-contato" name="person"></ion-icon> Username
+									</label>
+									<input type="text" class="form-control" name="username" id="username"
+										placeholder="Exemplo: Alyson Miguel">
+									<p id="erroNome"></p>
+								</div>
 
-						<form method="POST" onsubmit="verificar()" id="formulario">
-							<div class="form-group">
-								<label for="username">
-									<ion-icon class="icon-contato" name="person"></ion-icon> Username
-								</label>
-								<input type="text" class="form-control" name="username" id="username"
-									placeholder="Exemplo: Alyson Miguel">
-								<p id="erroNome"></p>
-							</div>
+								<div class="form-group">
+									<label for="email">
+										<ion-icon name="mail"></ion-icon>Email
+									</label>
+									<input type="email" class="form-control" name="email" id="email"
+										aria-describedby="emailHelp" placeholder="Exemplo: alysonmiguel@gmail.com">
+									<p id="erroEmail"></p>
+								</div>
 
-							<div class="form-group">
-								<label for="email">
-									<ion-icon name="mail"></ion-icon>Email
-								</label>
-								<input type="email" class="form-control" name="email" id="email"
-									aria-describedby="emailHelp" placeholder="Exemplo: alysonmiguel@gmail.com">
-								<p id="erroEmail"></p>
-							</div>
+								<div class="form-group">
+									<label for="assunto">
+										<ion-icon name="pricetags"></ion-icon> Assunto
+									</label>
+									<input type="text" class="form-control" id="assunto"
+										placeholder="Exemplo: Contratação de profionais">
+									<p id="erroAssunto"></p>
+								</div>
+								<div class="form-group">
+									<label for="textarea">
+										<ion-icon name="document"></ion-icon> Deixe sua mensagem
+									</label>
+									<textarea class="form-control" id="textarea" rows="3"></textarea>
+									<p id="erroMsg"></p>
+								</div>
 
-							<div class="form-group">
-								<label for="assunto">
-									<ion-icon name="pricetags"></ion-icon> Assunto
-								</label>
-								<input type="text" class="form-control" id="assunto"
-									placeholder="Exemplo: Contratação de profionais">
-								<p id="erroAssunto"></p>
-							</div>
-							<div class="form-group">
-								<label for="textarea">
-									<ion-icon name="document"></ion-icon> Deixe sua mensagem
-								</label>
-								<textarea class="form-control" id="textarea" rows="3"></textarea>
-								<p id="erroMsg"></p>
-							</div>
-
-							<button type="submit" class="btn btn-contato btn-block">Eviar</button>
-						</form>
-					</div>
-					<div class="col-md-6 contato">
-						<div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
-							<iframe
-								src="https://maps.google.com/maps?q=Escola+agricola+de+jundiai/&t=&z=13&ie=UTF8&iwloc=&output=embed"
-								frameborder="0" style="border:0" allowfullscreen></iframe>
+								<button type="submit" class="btn btn-contato btn-block">Eviar</button>
+							</form>
 						</div>
+						<div class="col-md-6 contato">
+							<div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+								<iframe
+									src="https://maps.google.com/maps?q=Escola+agricola+de+jundiai/&t=&z=13&ie=UTF8&iwloc=&output=embed"
+									frameborder="0" style="border:0" allowfullscreen></iframe>
+							</div>
+						</div>
+
 					</div>
-
-				</div>
-
+				</section>
 			</div>
 
 		</section>
